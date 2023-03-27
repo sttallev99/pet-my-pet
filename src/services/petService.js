@@ -9,3 +9,17 @@ export const getAll = async () => {
 
     return result;
 }
+
+export const create = async (petData) => {
+    let response = await fetch(`${BASE_URL}/pets`, {
+        method: 'POST',
+        headers: {
+            'content-type': 'application/json'
+        },
+        body: JSON.stringify(petData)
+    });
+
+    let petResult = await response.json();
+
+    return petResult;
+}

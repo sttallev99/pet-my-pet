@@ -24,7 +24,7 @@ export default function Header({
         <header id="site-header">
             <nav className="navbar">
                 <section className="navbar-dashboard">
-                    <Link to="/">Dashboard</Link>
+                    <Link to="/dashboard">Dashboard</Link>
                     { isAuthenticated
                         ? userNavigation
                         : guestNavigation
